@@ -1,0 +1,10 @@
+The type is in parentheses, and the default value is in square brackets.
+
+- `x`: The position on x-coordinate, the origin is at the center of video. (`number`) [0]
+- `y`: The position on y-coordinate, the origin is at the center of video. (`number`) [0]
+- `scale-x`: The scale value on x-coordinate. (`number`) [1]
+- `scale-y`: The scale value on y-coordinate. (`number`) [1]
+- `rotation`: The rotation angle. (`number` ranges [0, 360]) [0]
+- `opacity`: The opacity value. (`number` ranges [0, 1]) [1]
+- `width`: The width of the rectangle. (`number`)
+- `height`: The height of the rectangle. (`number`)
