@@ -1,0 +1,14 @@
+The type is in parentheses, and the default value is in square brackets.
+
+- `x`: The position on x-coordinate, the origin is at the center of video. (`number`) [0]
+- `y`: The position on y-coordinate, the origin is at the center of video. (`number`) [0]
+- `scale-x`: The scale value on x-coordinate. (`number`) [1]
+- `scale-y`: The scale value on y-coordinate. (`number`) [1]
+- `rotation`: The rotation angle. (`number` ranges [0, 360]) [0]
+- `opacity`: The opacity value. (`number` ranges [0, 1]) [1]
+- `fill-color`: The fill color. (`string`) ["rgba(135,206,250,0.5)"]
+- `border-color`: The stroke color. (`string`) ["rgba(135,206,250,1)"]
+- `border-width`: The stroke width. (`number`) [5]
+- `border-offset`: The stroke offset. (`number`) [0]
+- `border-interval`: The dash of border line. (`[number, number]`) [[1, 0]]
+- `radius`: The radius of the circle. (`number`)
