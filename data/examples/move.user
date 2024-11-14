@@ -1,0 +1,6 @@
+<apis>
+  <api>move.api</api>
+  <api>rect.api</api>
+</apis>
+
+How to use animation `move` to animate a rectangle?

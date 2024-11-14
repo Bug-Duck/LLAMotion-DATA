@@ -11,5 +11,7 @@ file = client.files.create(
   purpose="fine-tune"
 )
 
-with open("file.json", "w") as f:
-  f.write(str(file))
+with open("src/file.json", "w") as f:
+  f.write(json.dumps({
+    "file_id": file.id
+  }))

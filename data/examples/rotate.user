@@ -1,0 +1,6 @@
+<apis>
+  <api>rotate.api</api>
+  <api>rect.api</api>
+</apis>
+
+How to use animation `rotate` to animate a rectangle?

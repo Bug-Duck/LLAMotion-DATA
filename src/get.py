@@ -1,4 +1,5 @@
 import os
+import json
 from openai import OpenAI
 
 client = OpenAI(
@@ -7,4 +8,8 @@ client = OpenAI(
 
 jobs = client.fine_tuning.jobs.list()
 
-print(jobs)
+with open("src/jobs.json", "w") as f:
+  f.write(json.dumps({
+    "job_id": jobs.data[0].id,
+    "model": jobs.data[0].fine_tuned_model
+  }))

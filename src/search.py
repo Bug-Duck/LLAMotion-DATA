@@ -1,4 +1,5 @@
 import os
+import json
 from openai import OpenAI
 from time import sleep
 client = OpenAI(
@@ -6,7 +7,10 @@ client = OpenAI(
 )
 
 def main(index):
-  events = client.fine_tuning.jobs.list_events(fine_tuning_job_id="ftjob-d3yYwmqVmAtgO8qcwkafGirO", limit=10)
+  with open("src/jobs.json", "r") as f:
+    jobs = json.loads(f.read())
+
+  events = client.fine_tuning.jobs.list_events(fine_tuning_job_id=jobs["job_id"], limit=10)
   print(str(index) + " " + str(events.data[0].message))
 
 if __name__ == "__main__":

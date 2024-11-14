@@ -1,0 +1,6 @@
+<apis>
+  <api>scale.api</api>
+  <api>rect.api</api>
+</apis>
+
+How to use animation `scale` to animate a rectangle?

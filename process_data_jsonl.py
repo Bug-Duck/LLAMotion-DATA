@@ -9,21 +9,9 @@ def read_file_content(filepath):
 
 def extract_apis_from_xml(content):
     try:
-        # Look for <apis> tag using regex
-        match = re.search(r'<apis>(.*?)</apis>', content, re.DOTALL)
-        if not match:
-            return []
-        
-        # Parse the XML content
-        xml_content = f'<root>{match.group(0)}</root>'
-        root = ET.fromstring(xml_content)
-        
-        # Extract api filenames
-        apis = []
-        for api in root.findall('.//api'):
-            apis.append(api.text)
-        
-        return apis
+        # 使用正则表达式直接匹配所有 api 标签
+        apis = re.findall(r'<api>(.*?)</api>', content, re.DOTALL)
+        return [api.strip() for api in apis if api.strip()]
     except Exception as e:
         print(f"Error parsing XML: {e}")
         return []
@@ -58,13 +46,14 @@ def process_files(base_path):
         # Build system message
         system_message = "You are a animation engineer and you need to use a animation engine named VueMotion to complete the task.\n\n"
         
-        # Add API documentation to system message
+        # Add API documentation to system message only if API file exists
         for api_file in api_files:
             api_path = os.path.join(apis_path, api_file)
             if os.path.exists(api_path):
                 api_content = read_file_content(api_path)
-                system_message += f"Documentation for {api_file}:\n"
-                system_message += api_content + "\n\n"
+                system_message += f"Documentation for {api_file}:\n{api_content}\n\n"
+            else:
+                print(f"Warning: API file not found: {api_file}")
         
         # Remove XML tags from user content
         user_content = re.sub(r'<apis>.*?</apis>\n?', '', user_content, flags=re.DOTALL).strip()
@@ -84,7 +73,9 @@ def process_files(base_path):
                 "role": "assistant",
                 "content": assistant_content
             })
-            conversations.append(conversation)
+        
+        # Always add the conversation, even if there's no output file
+        conversations.append(conversation)
     
     return conversations
 

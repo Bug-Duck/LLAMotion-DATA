@@ -1,3 +1,5 @@
+This is a widget.
+
 The type is in parentheses, and the default value is in square brackets.
 
 - `x`: The position on x-coordinate, the origin is at the center of video. (`number`) [0]
