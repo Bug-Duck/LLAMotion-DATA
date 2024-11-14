@@ -1,21 +1,4 @@
 <template>
-<!-- Support parameters are as follows
-domainX: X axis range
-domainY: Y axis range
-intervalX: X axis interval
-intervalY: Y axis interval
-trendX: X axis label trend function
-trendY: Y axis label trend function
-fontColorX: X axis font color
-fontColorY: Y axis font color
-fontSizeX: X axis font size
-fontSizeY: Y axis font size
-grid: Show grid
-gridColor: Grid color
-gridWidth: Grid line width
-tipX: X axis arrow color
-tipY: Y axis arrow color 
--->
   <NumberPlane
     :domainX="[-30, 30]"
     :domainY="[-30, 30]"

@@ -1,1 +1,5 @@
-How to create a coordinate system?
+<apis>
+  <api>plane.api</api>
+</apis>
+
+How to use the component `<NumberPlane>`?

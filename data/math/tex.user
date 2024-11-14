@@ -1,1 +1,5 @@
-How do I create a graph that contains a mathematical formula?
+<apis>
+  <api>tex.api</api>
+</apis>
+
+How to use the component `<Tex>`?
