@@ -1,0 +1,32 @@
+<template>
+  <MathFunction
+    :fn="cosFunction"
+    :domain="[0, 100]"
+    wid="sin"
+    :divisionX="5"
+    :width="2"
+  />
+</template>
+
+<script setup lang="ts">
+  import { MathFunction } from '@vue-motion/extension-math'; // 引入组件
+  import { usePlayer, useWidget } from '@vue-motion/core';
+  import { stroke } from '@vue-motion/lib';
+  import { onMounted } from 'vue';
+  //  Get the widget instance from the `useWidget` hook by the `wid`.
+  const sin = useWidget('sin');
+  //  use the hook to get the player instance.
+  const player = usePlayer();
+  onMounted(() => {
+    //  Add `move` animation to the widget.
+    player.useAnimation(sin).delay(1).animate(stroke, {
+      offsetX: 1,
+      offsetY: 500,
+      duration: 3, // duration 3 second
+    });
+    // begin the animation
+    player.play();
+  });
+  // Define the mathematical function
+  const cosFunction = (x: number) => Math.cos(x);
+</script>

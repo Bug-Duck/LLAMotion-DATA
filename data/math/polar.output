@@ -1,0 +1,23 @@
+<template>
+  <!-- 
+Support parameters are as follows
+radius     Sets the radius of the polar coordinate system, determining the size of the coordinate system.
+divide     Divides the circle into specified parts, affecting the number and spacing of radial lines.
+interval   Sets the interval for each circular arc, determining the number and distribution of arcs.
+azimuthUnits  Sets the unit for the azimuth, supporting degrees, radians, or other units.
+fontSize   Sets the font size of the angle labels, affecting the appearance of the labels.
+trend      Allows for custom formatting of angle labels by passing a function to control the content of each angle's label.
+-->
+  <PolarPlane
+    :radius="150"
+    :divide="8"
+    :interval="45"
+    :azimuthUnits="'degrees'"
+    :fontSize="20"
+    :trend="(count:number) => `${count}`"
+  />
+</template>
+
+<script setup lang="ts">
+  import { PolarPlane } from '@vue-motion/extension-math';
+</script>

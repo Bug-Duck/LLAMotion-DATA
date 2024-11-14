@@ -1,0 +1,13 @@
+<template>
+  <!-- Render LaTeX mathematical formulas with katex and embed them in SVG -->
+  <Tex :autoCenter="true">
+    {{ formula }}
+  </Tex>
+</template>
+
+<script setup>
+  import { Tex } from '@vue-motion/extension-math';
+  import { ref } from 'vue';
+  //LaTeX mathematical formulas
+  const formula = ref('\\int_0^\\infty e^{-x^2} dx');
+</script>
