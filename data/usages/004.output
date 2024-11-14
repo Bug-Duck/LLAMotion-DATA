@@ -1,0 +1,65 @@
+These timing functions are used to create animation effects by describing the acceleration and deceleration of animations through different mathematical formulas. Here's a natural language description of these timing functions:
+
+1. **easeInSine, easeOutSine, easeInOutSine**: 
+   - These functions use a sine function to smoothly start and end animations. `easeInSine` starts slowly and then accelerates; `easeOutSine` decelerates towards the end; `easeInOutSine` accelerates in the middle, with slow start and end.
+
+2. **easeInQuad, easeOutQuad, easeInOutQuad**:
+   - These functions use a quadratic equation to describe animations. `easeInQuad` starts slowly and then accelerates; `easeOutQuad` decelerates towards the end; `easeInOutQuad` accelerates in the middle, with slow start and end.
+
+3. **easeInCubic, easeOutCubic, easeInOutCubic**:
+   - These functions use a cubic equation to describe animations. `easeInCubic` starts slowly and then accelerates; `easeOutCubic` decelerates towards the end; `easeInOutCubic` accelerates in the middle, with slow start and end.
+
+4. **easeInQuart, easeOutQuart, easeInOutQuart**:
+   - These functions use a quartic equation to describe animations. `easeInQuart` starts slowly and then accelerates; `easeOutQuart` decelerates towards the end; `easeInOutQuart` accelerates in the middle, with slow start and end.
+
+5. **easeInQuint, easeOutQuint, easeInOutQuint**:
+   - These functions use a quintic equation to describe animations. `easeInQuint` starts slowly and then accelerates; `easeOutQuint` decelerates towards the end; `easeInOutQuint` accelerates in the middle, with slow start and end.
+
+6. **easeInExpo, easeOutExpo, easeInOutExpo**:
+   - These functions use an exponential function to describe animations. `easeInExpo` starts very slowly and then accelerates rapidly; `easeOutExpo` decelerates rapidly towards the end; `easeInOutExpo` accelerates in the middle, with slow start and end.
+
+7. **easeInCirc, easeOutCirc, easeInOutCirc**:
+   - These functions use a circular function to describe animations. `easeInCirc` starts slowly and then accelerates; `easeOutCirc` decelerates towards the end; `easeInOutCirc` accelerates in the middle, with slow start and end.
+
+8. **easeInBack, easeOutBack, easeInOutBack**:
+   - These functions slightly overshoot the boundary at the start or end, then return to the target position. `easeInBack` starts slowly and then accelerates; `easeOutBack` decelerates towards the end; `easeInOutBack` accelerates in the middle, with slow start and end.
+
+9. **easeInElastic, easeOutElastic, easeInOutElastic**:
+   - These functions simulate elastic motion, with a bouncing effect at the start or end. `easeInElastic` starts slowly and then accelerates; `easeOutElastic` decelerates towards the end; `easeInOutElastic` accelerates in the middle, with slow start and end.
+
+10. **easeBounce**:
+    - This function simulates a bouncing effect, with several rebounds towards the end of the animation.
+
+These timing functions help create more natural and smooth animation effects.
+
+In common usage, we input it as a parameter in `.animate()` method:
+
+```vue
+<script setup>
+import { usePlayer, useWidget } from 'https://cdn.jsdelivr.net/npm/@vue-motion/core@latest/dist/index.js'
+import { Motion, Rect, move, easeInOutSine } from 'https://cdn.jsdelivr.net/npm/@vue-motion/lib@0.6.0/dist/index.js'
+import { onMounted } from 'https://cdn.jsdelivr.net/npm/vue@3.5.12/dist/vue.esm-browser.js'
+
+const { play, useAnimation } = usePlayer()
+const rect = useWidget('rect')
+
+onMounted(() => {
+  useAnimation(rect)
+    .animate(move, {
+      duration: 1, // Use 1 second.
+      offsetX: 200,
+      offsetY: 300,
+      by: easeInOutSine,
+    })
+  play()
+})
+</script>
+
+<template>
+  <Motion :width="1600" :height="900">
+    <Rect :width="200" :height="200" wid="rect"/>
+  </Motion>
+</template>
+```
+
+You need to import it first.
