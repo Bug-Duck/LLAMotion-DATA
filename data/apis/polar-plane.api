@@ -1,11 +1,11 @@
-This is a numberPlane api.
+This is a widget api.
 
 The type is in parentheses, and the default value is in square brackets.
 
 - `radius`: The radius of the polar coordinate system. (`[number, number]`)
 - `interval`: Angular intervals, used to draw arcs.. (`number`) [100]
 - `trend`: Trend function to calculate the Angle trend function. (`(count: number) => string`) [(count) => count.toString()]
-- `azimuthUnits`: Angular unit. (`'PI radians' | 'TAU radians' | 'degrees' | 'gradians'`) 
+- `azimuth-units`: Angular unit. (`'PI radians' | 'TAU radians' | 'degrees' | 'gradians'`) 
 - `divide`: Controls how many parts of the polar coordinate plane are divided. (`number`) [20]
-- `fontSize`: Font size. (`number`) 
-- `fontColor`: Font color. (`string`) ['white']
+- `font-size`: Font size. (`number`) 
+- `font-color`: Font color. (`string`) ['white']

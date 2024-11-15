@@ -1,0 +1,8 @@
+This is a animation api.
+
+The type is in parentheses, and the default value is in square brackets.
+
+- `duration`: The duration of the animation. (`number`)
+- `by`: The timing function. (`(t: number) => number`) [t => t]
+- `from`: The start opacity. (`number`)
+- `to`: The end opacity. (`number`)

@@ -1,12 +1,12 @@
-This is a numberPlane api.
+This is a widget api.
 
 The type is in parentheses, and the default value is in square brackets.
 
 - `fn`: Mathematical function. (`(x: number) => number`)
 - `domain`: The domain of the function, that is, the range of x. (`[number, number]`)
 - `ranges`: An optional y range that controls the upper and lower limits of the drawing. (`[number, number]`) [[0,0]]
-- `divisionX`: Calculate the X-axis step size. (`number`) [100]
-- `divisionY`: Calculate the Y-axis step size. (`number`) [100]
+- `division-x`: Calculate the X-axis step size. (`number`) [100]
+- `division-y`: Calculate the Y-axis step size. (`number`) [100]
 - `color`: Control the color of the graphics. (`string`) ['white']
 - `width`: Control the line width of the graph. (`number`) 
-- `fillColor`: Controls the fill color of the graph. (`string`) ["none"]
+- `fill-color`: Controls the fill color of the graph. (`string`) ["none"]

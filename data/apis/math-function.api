@@ -1,12 +1,12 @@
-This is a numberPlane api.
+This is a widget api.
 
 The type is in parentheses, and the default value is in square brackets.
 
-- `baseUnit`: The unit of a coordinate axis. (`'number' | 'radian' | 'degree'`)
+- `base-unit`: The unit of a coordinate axis. (`'number' | 'radian' | 'degree'`)
 - `interval`: Spacing of axes. (`number`) [100]
 - `trend`: Trend function to customize the text of the tag. (`(count: number) => string`) [(count) => count.toString()]
-- `fontSize`: Font size. (`number`) 
-- `fontColor`: Font color. (`string`) ['white']
+- `font-size`: Font size. (`number`) 
+- `font-color`: Font color. (`string`) ['white']
 - `domain`: Axis range. (`[number, number]`)
 - `tip`: Arrow color. (`string`) ["white"]
 - `trim`: Arrow border color . (`string`) ["white"]
