@@ -1,0 +1,6 @@
+This is a numberPlane api.
+
+The type is in parentheses, and the default value is in square brackets.
+
+- `dkatexOptions`: Configuration options to pass to katex rendering. (`katex.KatexOptions`)
+- `autoCenter`: Whether the formula is automatically centered to render. (`boolean`)

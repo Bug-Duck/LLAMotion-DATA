@@ -1,0 +1,22 @@
+This is a numberPlane api.
+
+The type is in parentheses, and the default value is in square brackets.
+
+- `domainX`: X axis range. (`[number, number]`)
+- `domainY`: Y axis range. (`[number, number]`)
+- `intervalX`: X axis interval. (`number`) [100]
+- `intervalY`: Y axis interval. (`number`) [100]
+- `trendX`: X axis label trend function. (`(count: number) => string`) [(count) => count.toString()]
+- `trendY`: Y axis label trend function. (`(count: number) => string`) [(count) => count.toString()]
+- `fontColorX`: X axis font color. (`string`) ["white"]
+- `fontColorY`: Y axis font color. (`string`) ["white"]
+- `fontSizeX`: X axis font size. (`number`) 
+- `fontSizeY`: Y axis font size. (`number`) 
+- `grid`: Show grid. (`boolean`) [false]
+- `gridColor`: Grid color. (`string`) ["white"]
+- `gridWidth`: Grid line width. (`number`) [1]
+- `tipX`: X axis arrow color. (`string`) ["white"]
+- `tipY`: Y axis arrow color. (`string`) ["white"]
+- `baseUnit`: Y axis arrow color. (`string`) ["white"]
+- `Yrotation`: Control the rotation Angle of Y-axis text. (`number` ranges [0, 360]) [90]
+- `baseUnit`: The unit of a coordinate axis. (`'number' | 'radian' | 'degree'`)

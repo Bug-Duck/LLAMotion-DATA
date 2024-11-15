@@ -1,0 +1,11 @@
+<template>
+  <NumberPlane
+    :domainX="[-30, 30]"
+    :domainY="[-30, 30]"
+    :grid="false"
+  />
+</template>
+
+<script setup lang="ts">
+  import { NumberPlane } from '@vue-motion/extension-math';
+</script>
