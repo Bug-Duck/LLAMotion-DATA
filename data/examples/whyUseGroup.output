@@ -1,0 +1,16 @@
+Dynamically generates an object to set element properties based on the Options passed in.
+It uses the svg g tag, has powerful group management, batch generation functions.
+
+Use like:
+<template>
+  <Group :x="-200">
+    <Rect :width="200" :height="200"/>
+    <Rect :width="100" :height="300"/>
+    <Rect :width="600" :height="500"/>
+  </Group>
+</template>
+
+In the above examples, the Rect is affected by x=-200
+
+
+
