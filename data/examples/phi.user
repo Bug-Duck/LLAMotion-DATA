@@ -1,0 +1,12 @@
+<apis>
+  <api>math-function.api</api>
+  <api>plane.api</api>
+  <api>group.api</api>
+  <api>text.api</api>
+</apis>
+
+I'm looking at an interesting mathematical animation that visualizes how a sine function changes dynamically. The animation shows me the function f(x) = sin(φx), where I can see φ gradually increasing from 0 to 5 over a 3-second period.
+
+The visualization appears on a digital plane with a grid, where I can see the x-axis spanning from -8 to 8 and the y-axis ranging from -6 to 6. What's particularly helpful is that the current function expression is displayed at the top of the animation, updating in real-time.
+
+As I watch the animation progress, I can observe how the sine wave's frequency increases as φ grows larger. It's fascinating to see how this coefficient directly affects the shape of the sine curve. This dynamic visualization really helps me understand the relationship between the coefficient φ and the resulting wave pattern.

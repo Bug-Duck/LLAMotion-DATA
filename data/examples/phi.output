@@ -1,0 +1,38 @@
+<script setup>
+import { defineAnimation, useMotion, usePlayer, useWidget } from '@vue-motion/core'
+import { NumberPlane, MathFunction } from '@vue-motion/extension-math';
+import { Group, Text, easeInBack } from '@vue-motion/lib'
+import { computed, ref, onMounted } from 'vue';
+
+const phi = ref(1)
+
+const change = defineAnimation((context, progress) => {
+  phi.value = progress * 5
+})
+
+const fn = computed(() => {
+  return (x: number) => Math.sin(phi.value * x)
+})
+
+const plane = useWidget('plane')
+
+const { useAnimation, play } = usePlayer()
+
+onMounted(() => {
+  useAnimation(plane)
+    .animate(change, { duration: 3, by: easeInBack })
+  play()
+})
+
+// play()
+</script>
+
+<template>
+  <Motion :width="1600" :height="900">
+    <Text :scale-x="2" :scale-y="2" :y="-400">f(x) = sin({{ phi.toFixed(1) }} * x)</Text>
+    <Group>
+      <NumberPlane :ranges-x="[-8, 8]" :ranges-y="[-6, 6]" :grid="true" wid="plane"/>
+      <MathFunction :fn="fn" :ranges="[0, 16]" :x="-800"/>
+    </Group>
+  </Motion>
+</template>

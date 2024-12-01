@@ -1,0 +1,30 @@
+<script setup>
+// First, import the `defineAnimation` function from `@vue-motion/core`.
+import { usePlayer, useWidget, defineAnimation } from 'https://cdn.jsdelivr.net/npm/@vue-motion/core@latest/dist/index.js'
+import { Motion, Rect } from 'https://cdn.jsdelivr.net/npm/@vue-motion/lib@0.6.0/dist/index.js'
+import { onMounted } from 'https://cdn.jsdelivr.net/npm/vue@3.5.12/dist/vue.esm-browser.js'
+
+const { play, useAnimation } = usePlayer()
+const rect = useWidget('rect')
+
+// Second, define a custom animation.
+const customAnimation = defineAnimation((context, progress) => {
+  // Third, set the `x` property of the widget to the `progress` value multiplied by 100.
+  context.target.x = progress * 100
+})
+
+onMounted(() => {
+  // Fourth, add the custom animation to the widget.
+  useAnimation(rect)
+    .animate(customAnimation, { duration: 1 })
+  // Fifth, call the `play` method to start the animation.
+  // After that, you can see the rectangle moving from left to right.
+  play()
+})
+</script>
+
+<template>
+  <Motion :width="1600" :height="900">
+    <Rect :width="200" :height="200" wid="rect" />
+  </Motion>
+</template>
