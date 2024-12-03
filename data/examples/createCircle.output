@@ -1,6 +1,6 @@
 <template>
   <Arc
-    wid="circle"
+    :widget="circle"
     :radius="30"
   />
 </template>
@@ -10,7 +10,7 @@
   import { Arc, grow } from '@vue-motion/lib';
   import { onMounted } from 'vue';
   //  Get the widget instance from the `useWidget` hook by the `wid`.
-  const circle = useWidget('circle');
+  const circle = useWidget();
   //  use the hook to get the player instance.
   const player = usePlayer();
   onMounted(() => {

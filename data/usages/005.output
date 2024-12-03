@@ -1,16 +1,19 @@
 <script setup>
 // First, import the `defineAnimation` function from `@vue-motion/core`.
 import { usePlayer, useWidget, defineAnimation } from 'https://cdn.jsdelivr.net/npm/@vue-motion/core@latest/dist/index.js'
-import { Motion, Rect } from 'https://cdn.jsdelivr.net/npm/@vue-motion/lib@0.6.0/dist/index.js'
+import { Motion, Rect } from 'https://cdn.jsdelivr.net/npm/@vue-motion/lib@latest/dist/index.js'
 import { onMounted } from 'https://cdn.jsdelivr.net/npm/vue@3.5.12/dist/vue.esm-browser.js'
 
 const { play, useAnimation } = usePlayer()
-const rect = useWidget('rect')
+const rect = useWidget()
 
 // Second, define a custom animation.
-const customAnimation = defineAnimation((context, progress) => {
-  // Third, set the `x` property of the widget to the `progress` value multiplied by 100.
-  context.target.x = progress * 100
+// The `target` is the widget instance, and `context` is the animation parameters.
+const customAnimation = defineAnimation((target, context) => {
+  // The function returned will be called with the progress value each frame.
+  return (progress) => {
+    target.x = progress * 100
+  }
 })
 
 onMounted(() => {
@@ -25,6 +28,6 @@ onMounted(() => {
 
 <template>
   <Motion :width="1600" :height="900">
-    <Rect :width="200" :height="200" wid="rect" />
+    <Rect :width="200" :height="200" :widget="rect" />
   </Motion>
 </template>

@@ -2,7 +2,7 @@
   <MathFunction
     :fn="cosFunction"
     :domain="[0, 100]"
-    wid="sin"
+    :widget="sin"
     :divisionX="5"
     :width="2"
   />
@@ -14,7 +14,7 @@
   import { stroke } from '@vue-motion/lib';
   import { onMounted } from 'vue';
   //  Get the widget instance from the `useWidget` hook by the `wid`.
-  const sin = useWidget('sin');
+  const sin = useWidget();
   //  use the hook to get the player instance.
   const player = usePlayer();
   onMounted(() => {

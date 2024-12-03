@@ -3,7 +3,7 @@
     :baseUnit="'number'"
     :domain="[0, 10]"
     :interval="10"
-    wid="axis"
+    :widget="axis"
   />
 </template>
 
@@ -13,7 +13,7 @@
   import { move } from '@vue-motion/lib';
   import { onMounted } from 'vue';
   //  Get the widget instance from the `useWidget` hook by the `wid`.
-  const axis = useWidget('axis');
+  const axis = useWidget();
   //  use the hook to get the player instance.
   const player = usePlayer();
   onMounted(() => {

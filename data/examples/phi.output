@@ -1,7 +1,7 @@
 <script setup>
-import { defineAnimation, useMotion, usePlayer, useWidget } from '@vue-motion/core'
-import { NumberPlane, MathFunction } from '@vue-motion/extension-math';
-import { Group, Text, easeInBack } from '@vue-motion/lib'
+import { defineAnimation, useMotion, usePlayer, useWidget } from 'https://cdn.jsdelivr.net/npm/@vue-motion/core@latest/dist/index.js'
+import { NumberPlane, MathFunction } from 'https://cdn.jsdelivr.net/npm/@vue-motion/extension-math@latest/dist/index.js';
+import { Group, Text, easeInBack } from 'https://cdn.jsdelivr.net/npm/@vue-motion/lib@latest/dist/index.js'
 import { computed, ref, onMounted } from 'vue';
 
 const phi = ref(1)
@@ -14,7 +14,7 @@ const fn = computed(() => {
   return (x: number) => Math.sin(phi.value * x)
 })
 
-const plane = useWidget('plane')
+const plane = useWidget()
 
 const { useAnimation, play } = usePlayer()
 
@@ -31,7 +31,7 @@ onMounted(() => {
   <Motion :width="1600" :height="900">
     <Text :scale-x="2" :scale-y="2" :y="-400">f(x) = sin({{ phi.toFixed(1) }} * x)</Text>
     <Group>
-      <NumberPlane :ranges-x="[-8, 8]" :ranges-y="[-6, 6]" :grid="true" wid="plane"/>
+      <NumberPlane :ranges-x="[-8, 8]" :ranges-y="[-6, 6]" :grid="true" :widget="plane"/>
       <MathFunction :fn="fn" :ranges="[0, 16]" :x="-800"/>
     </Group>
   </Motion>

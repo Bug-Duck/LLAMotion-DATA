@@ -7,5 +7,5 @@
 </template>
 
 <script setup lang="ts">
-  import { NumberPlane } from '@vue-motion/extension-math';
+  import { NumberPlane } from 'https://cdn.jsdelivr.net/npm/@vue-motion/extension-math@latest/dist/index.js';
 </script>

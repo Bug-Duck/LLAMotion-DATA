@@ -1,10 +1,10 @@
 <script setup>
 import { usePlayer, useWidget } from 'https://cdn.jsdelivr.net/npm/@vue-motion/core@latest/dist/index.js'
-import { Motion, Rect, move, rotate } from 'https://cdn.jsdelivr.net/npm/@vue-motion/lib@0.6.0/dist/index.js'
+import { Motion, Rect, move, rotate } from 'https://cdn.jsdelivr.net/npm/@vue-motion/lib@latest/dist/index.js'
 import { onMounted } from 'https://cdn.jsdelivr.net/npm/vue@3.5.12/dist/vue.esm-browser.js'
 
 const { play, useAnimation } = usePlayer()
-const rect = useWidget('rect')
+const rect = useWidget()
 
 onMounted(() => {
   // First, move the rectangle to (200, 300), and then rotate it 90 degrees.
@@ -24,6 +24,6 @@ onMounted(() => {
 
 <template>
   <Motion :width="1600" :height="900">
-    <Rect :width="200" :height="200" wid="rect"/>
+    <Rect :width="200" :height="200" :widget="rect"/>
   </Motion>
 </template>
