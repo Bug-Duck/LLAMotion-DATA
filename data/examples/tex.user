@@ -1,5 +1,5 @@
 <apis>
-  <api>tex.api</api>
+  <api>Tex.api</api>
 </apis>
 
 How to use the component `<Tex>`?

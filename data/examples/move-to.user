@@ -1,6 +1,6 @@
 <apis>
-  <api>move-to.api</api>
-  <api>rect.api</api>
+  <api>moveTo.api</api>
+  <api>Rect.api</api>
 </apis>
 
 How to use the `moveTo` animation api?

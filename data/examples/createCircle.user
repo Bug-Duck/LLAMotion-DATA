@@ -1,1 +1,6 @@
+<apis>
+  <api>Arc.api</api>
+  <api>grow.api</api>
+</apis>
+
 Animating a circle

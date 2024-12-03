@@ -1,5 +1,5 @@
 <apis>
-  <api>polygon.api</api>
+  <api>Polygon.api</api>
 </apis>
 
 How to use the component `<Polygon>`?

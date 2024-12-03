@@ -1,5 +1,5 @@
 <apis>
-  <api>text-unit.api</api>
+  <api>TextUnit.api</api>
 </apis>
 
 How to use the component `<TextUnit>`?

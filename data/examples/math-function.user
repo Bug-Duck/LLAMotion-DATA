@@ -1,5 +1,5 @@
 <apis>
-  <api>math-function.api</api>
+  <api>MathFunction.api</api>
 </apis>
 
 How to use the component `<MathFunction>`?

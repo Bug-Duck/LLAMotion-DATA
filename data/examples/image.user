@@ -1,5 +1,5 @@
 <apis>
-  <api>image.api</api>
+  <api>Image.api</api>
 </apis>
 
 How to use the component `<Image>`?

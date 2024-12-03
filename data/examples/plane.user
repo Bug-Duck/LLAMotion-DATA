@@ -1,5 +1,5 @@
 <apis>
-  <api>plane.api</api>
+  <api>NumberPlane.api</api>
 </apis>
 
 How to use the component `<NumberPlane>`?

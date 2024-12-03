@@ -1,5 +1,5 @@
 <apis>
-  <api>rect.api</api>
+  <api>Rect.api</api>
 </apis>
 
 How to use the component `<Rect>`?

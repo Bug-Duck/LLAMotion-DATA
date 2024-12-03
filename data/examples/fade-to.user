@@ -1,6 +1,6 @@
 <apis>
-  <api>fade-to.api</api>
-  <api>rect.api</api>
+  <api>fadeTo.api</api>
+  <api>Rect.api</api>
 </apis>
 
 How to use the `fadeTo` animation api?

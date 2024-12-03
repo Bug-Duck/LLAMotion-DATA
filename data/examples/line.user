@@ -1,5 +1,5 @@
 <apis>
-  <api>line.api</api>
+  <api>Line.api</api>
 </apis>
 
 How to use the component `<Line>`?

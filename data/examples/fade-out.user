@@ -1,6 +1,6 @@
 <apis>
-  <api>fade-out.api</api>
-  <api>rect.api</api>
+  <api>fadeOut.api</api>
+  <api>Rect.api</api>
 </apis>
 
 How to use the `fadeOut` animation api?

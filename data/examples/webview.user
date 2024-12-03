@@ -1,5 +1,5 @@
 <apis>
-  <api>webview.api</api>
+  <api>Webview.api</api>
 </apis>
 
 How to use the component `<Webview>`?

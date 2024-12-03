@@ -1,5 +1,5 @@
 <apis>
-  <api>text.api</api>
+  <api>Text.api</api>
 </apis>
 
 How to use the component `<Text>`?

@@ -1,8 +1,8 @@
 <apis>
-  <api>math-function.api</api>
-  <api>plane.api</api>
-  <api>group.api</api>
-  <api>text.api</api>
+  <api>MathFunction.api</api>
+  <api>NumberPlane.api</api>
+  <api>Group.api</api>
+  <api>Text.api</api>
 </apis>
 
 I'm looking at an interesting mathematical animation that visualizes how a sine function changes dynamically. The animation shows me the function f(x) = sin(φx), where I can see φ gradually increasing from 0 to 5 over a 3-second period.

@@ -1,4 +1,6 @@
 <apis>
   <api>destory.api</api>
-  <api>rect.api</api>
+  <api>Rect.api</api>
 </apis>
+
+How to destroy a widget?
