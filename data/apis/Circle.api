@@ -14,5 +14,3 @@ The type is in parentheses, and the default value is in square brackets.
 - `border-offset`: The stroke offset. (`number`) [0]
 - `border-interval`: The dash of border line. (`[number, number]`) [[1, 0]]
 - `radius`: The radius of the circle. (`number`)
-- `from`: The start angle. (`number` ranges [0, 360]) [0]
-- `to`: The end angle. (`number` ranges [0, 360]) [360]

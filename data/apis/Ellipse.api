@@ -14,5 +14,9 @@ The type is in parentheses, and the default value is in square brackets.
 - `border-offset`: The stroke offset. (`number`) [0]
 - `border-interval`: The dash of border line. (`[number, number]`) [[1, 0]]
 - `radius`: The radius of the circle. (`number`)
-- `from`: The start angle. (`number` ranges [0, 360]) [0]
-- `to`: The end angle. (`number` ranges [0, 360]) [360]
+- `cx`: The x-coordinate of the center of the ellipse. (`number`)
+- `cy`: The y-coordinate of the center of the ellipse. (`number`)
+- `rx`: The x-radius of the ellipse. (`number`)
+- `ry`: The y-radius of the ellipse. (`number`)
+- `width`: The width of the ellipse. (`number`)
+- `height`: The height of the ellipse. (`number`)
