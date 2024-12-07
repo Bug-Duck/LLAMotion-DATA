@@ -16,3 +16,8 @@ The type is in parentheses, and the default value is in square brackets.
 - `color`: Control the color of the graphics. (`string`) ['white']
 - `width`: Control the line width of the graph. (`number`) 
 - `fill-color`: Controls the fill color of the graph. (`string`) ["none"]
+
+Notice:
+
+- `fill-color` is not be suggested to set, because it is a function image.
+- property `domain` has a division effect on the graph, the default value of `division-x` is 100, which means the concrete length of a unit of `domain` is 100. for example if you want to draw a function that's domain is [0, 10], the concrete length will be 10 * 100 = 1000. Don't set the value overloaded otherwise it will render slowly.

@@ -1,0 +1,23 @@
+<script setup>
+import { usePlayer, useWidget } from 'https://cdn.jsdelivr.net/npm/@vue-motion/core@latest/dist/index.js'
+import { Motion, Rect, discolorateBorderTo } from 'https://cdn.jsdelivr.net/npm/@vue-motion/lib@latest/dist/index.js'
+import { onMounted } from 'https://cdn.jsdelivr.net/npm/vue@3.5.12/dist/vue.esm-browser.js'
+
+const { play, useAnimation } = usePlayer()
+const rect = useWidget()
+
+onMounted(() => {
+  useAnimation(rect)
+    .animate(discolorateBorderTo, {
+      duration: 3,
+      to: '#112233',
+    })
+  play()
+})
+</script>
+
+<template>
+  <Motion :width="1600" :height="900">
+    <Rect :width="200" :height="200" :widget="rect"/>
+  </Motion>
+</template>

@@ -19,5 +19,12 @@ trend      Allows for custom formatting of angle labels by passing a function to
 </template>
 
 <script setup lang="ts">
-  import { PolarPlane } from 'https://cdn.jsdelivr.net/npm/@vue-motion/extension-math@latest/dist/index.js';
+import { PolarPlane } from 'https://cdn.jsdelivr.net/npm/@vue-motion/extension-math@latest/dist/index.js';
+import { usePlayer } from 'https://cdn.jsdelivr.net/npm/@vue-motion/core@latest/dist/index.js';
+
+const { play } = usePlayer()
+
+onMounted(() => {
+  play()
+})
 </script>

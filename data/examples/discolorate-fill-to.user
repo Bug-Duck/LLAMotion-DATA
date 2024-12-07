@@ -1,0 +1,6 @@
+<apis>
+  <api>discolorateFillTo.api</api>
+  <api>Rect.api</api>
+</apis>
+
+How to use the `discolorateFillTo` animation?

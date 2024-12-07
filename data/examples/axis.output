@@ -8,22 +8,12 @@
 </template>
 
 <script setup lang="ts">
-  import { NumberAxis } from '@vue-motion/extension-math'; // import the component
-  import { usePlayer, useWidget } from '@vue-motion/core';
-  import { move } from '@vue-motion/lib';
-  import { onMounted } from 'vue';
-  //  Get the widget instance from the `useWidget` hook by the `wid`.
-  const axis = useWidget();
-  //  use the hook to get the player instance.
-  const player = usePlayer();
-  onMounted(() => {
-    //  Add `move` animation to the widget.
-    player.useAnimation(axis).delay(1).animate(move, {
-      offsetX: 1,
-      offsetY: 500,
-      duration: 3, // duration 3 second
-    });
-    // begin the animation
-    player.play();
-  });
+import { NumberAxis } from '@vue-motion/extension-math'; // import the component
+import { usePlayer } from '@vue-motion/core';
+
+const { play } = usePlayer()
+
+onMounted(() => {
+  play()
+})
 </script>

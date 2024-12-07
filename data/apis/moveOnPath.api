@@ -1,0 +1,6 @@
+This is a animation api. The `moveOnPath` animation is used to move the widget on the SVG path.
+
+The type is in parentheses, and the default value is in square brackets.
+
+- `duration`: The duration of the animation. (`number`)
+- `path`: The SVG path. (`string`)

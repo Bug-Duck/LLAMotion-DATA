@@ -1,11 +1,17 @@
 <template>
   <NumberPlane
-    :domainX="[-30, 30]"
-    :domainY="[-30, 30]"
+    :domainX="[-5, 5]"
+    :domainY="[-5, 5]"
     :grid="false"
   />
 </template>
 
 <script setup lang="ts">
-  import { NumberPlane } from 'https://cdn.jsdelivr.net/npm/@vue-motion/extension-math@latest/dist/index.js';
+import { NumberPlane } from 'https://cdn.jsdelivr.net/npm/@vue-motion/extension-math@latest/dist/index.js';
+import { usePlayer } from 'https://cdn.jsdelivr.net/npm/@vue-motion/core@latest/dist/index.js';
+const { play } = usePlayer()
+
+onMounted(() => {
+  play()
+})
 </script>

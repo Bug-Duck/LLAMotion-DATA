@@ -1,0 +1,7 @@
+This is a animation api. The animation is used to change the fill color of the widget.
+
+The type is in parentheses, and the default value is in square brackets.
+
+- `duration`: The duration of the animation. (`number`)
+- `by`: The timing function. (`(t: number) => number`) [t => t]
+- `to`: The last value of the color, it can be RGB, RGBA, HSL, HSLA, and CSS color string. (`string`)

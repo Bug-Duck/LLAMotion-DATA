@@ -1,0 +1,23 @@
+<script setup>
+import { usePlayer, useWidget } from 'https://cdn.jsdelivr.net/npm/@vue-motion/core@latest/dist/index.js'
+import { Motion, Rect, moveOnPath } from 'https://cdn.jsdelivr.net/npm/@vue-motion/lib@latest/dist/index.js'
+import { onMounted } from 'https://cdn.jsdelivr.net/npm/vue@3.5.12/dist/vue.esm-browser.js'
+
+const { play, useAnimation } = usePlayer()
+const rect = useWidget()
+
+onMounted(() => {
+  useAnimation(rect)
+    .animate(moveOnPath, {
+      duration: 1, // Use 1 second.
+      path: 'M 0 0 L 100 100',
+    })
+  play()
+})
+</script>
+
+<template>
+  <Motion :width="1600" :height="900">
+    <Rect :width="200" :height="200" :widget="rect"/>
+  </Motion>
+</template>
